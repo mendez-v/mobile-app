@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Poiret One';
+  src: url('./assets/font/poiretone.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  font-family: 'Poiret One';
+  font-weight: bolder;
+  color: var(--clr-3);
+  background-color: var(--clr-1);
+  letter-spacing: 2px;
+}
+article {
+  margin: 3rem auto;
+  padding: 1rem;
+  max-inline-size: 31rem;
+  inline-size: 100%;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+label {
+  inline-size: 1px;
+  block-size: 1px;
+  font-size: 1px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -200vw;
+}
+input, button {
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: center;
+  border-radius: .5rem;
+  border: none;
+  color: inherit;
+  box-shadow: 0 0 .25rem var(--clr-1);
+  letter-spacing: 2px;
+}
+input, button, li {
+  padding: .8rem 1.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+input {
+  background-color: var(--clr-4);
+}
+button {
+  color: var(--clr-4);
+  background-color: var(--clr-3);
+  transition: background-color .3s ease, color .3s ease, transform .3s ease;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+ul li {
+  flex-grow: 1;
+  background-color: var(--clr-5);
+  border: 1px solid hsl(from var(--clr-6) h s l / .3);
+  border-radius: .5rem;
+  box-shadow: 0 0 .2rem hsl(from var(--clr-6) h s l / .3);
+  transition: background-color .3s ease;
+}
+
+
+footer {
+  padding-block: 1.5rem;
+  text-align: center;
+}
+
+a {
+  text-decoration-style: wavy;
+  text-decoration-thickness: .1rem;
+  text-underline-offset: .2rem;
+}
+
+:root {
+  --clr-1: #dad9d5;
+  --clr-1: #ebf5fb;
+  --clr-2: #ffb648;
+  --clr-3: #5e3228;
+  --clr-4: #ffc7d4;
+  --clr-5: #fff;
+  --clr-6: #000;
+}
+
+:focus-visible {
+  outline-color: var(--clr-2);
+}
+
+@media (hover:hover) {
+  button:hover {
+    background-color: var(--clr-2);
+    color: var(--clr-3)
+  }
+  ul li:hover {
+    background-color: var(--clr-2);
+  }
+}
+
+button:active {
+  transform: scale(.9);
+}
