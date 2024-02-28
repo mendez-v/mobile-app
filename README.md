@@ -122,6 +122,46 @@ let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
 remove(exactLocationOfItemInDB)
 ```
 
+🔰 Web Manifest - is a JSON file that allows developers to control how their application behaves when installed on the user's desktop or mobile device. 
+
+```json
+{
+  "name":"Shopping Cart",
+  "short_name":"Shopping Cart",
+  "start_url": "https://mendez-v.github.io/mobile-app/",
+  "icons":[
+    { 
+      "src":"./assets/icon/android-chrome-192x192.png",
+      "sizes":"192x192",
+      "type":"image/png" 
+    },
+    { 
+      "src":"./assets/icon/android-chrome-512x512.png",
+      "sizes":"512x512",
+      "type":"image/png" 
+    }
+  ],
+  "theme_color":"#dad9d5",
+  "background_color":"#dad9d5",
+  "display":"standalone"
+}
+```
+
+1. ***name***: This is the full name of your web application.
+
+1. ***short_name***: This is the short name of your web application that will be displayed where space is limited, such as on the mobile device's home screen.
+
+1. ***start_url***: This is the URL that will open when the user launches your web application from their device.
+
+1. ***icons***: This is an array of objects that specifies the icons of your web application for different screen sizes and resolutions. Each object must have the properties `src` (the path to the icon), `sizes` (the size of the icon in pixels) and `type` (the file type of the icon).
+
+1. ***theme_color***: This is the main colour of your web application. It is used in areas such as the device status bar. 
+
+1. ***background_color***: This is the background colour of your web application. It is displayed while the web application is loading. 
+
+1. ***display***: This is the preferred display mode for your web application. It can be `fullscreen`, `standalone`, `minimal-ui` or `browser`. 
+    1. `standalone`, which means that your web application will open in its own window, separate from the browser.
+
 ## *Useful resources*
 
 🔥 [Microsoft Copilot](https://copilot.microsoft.com/)
